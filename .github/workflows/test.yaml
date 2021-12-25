@@ -9,9 +9,12 @@ jobs:
         with:
           node-version: '14.17.0'
       - run: node -v
-      - run: yarn
-      - run: yarn build
-      - run: tree
+      - name: 'Install Dependencies'
+        run: yarn
+      - name: 'Build'
+        run: yarn build
+      - name: 'Show Tree'
+        run: tree
 # myapp:
 #   service: |
 #     shit
