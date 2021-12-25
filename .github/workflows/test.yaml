@@ -1,0 +1,17 @@
+name: My First Github Action
+on: [push, pull_request]
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hello World!!!!'
+      - run: echo 'This is step number 2'
+# myapp:
+#   service: |
+#     shit
+#     this is a multiline string
+#   test: shit-2
+#   arrayTest:
+#     - elem1: 'yo'
+#       elem1.1: 'yoy'
+#     - elem2: 'yoyo'
