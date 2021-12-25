@@ -9,8 +9,9 @@ jobs:
         with:
           node-version: '14.17.0'
       - run: node -v
-      - run: npm install
-      - run: npm build
+      - run: yarn
+      - run: yarn build
+      - run: tree
 # myapp:
 #   service: |
 #     shit
