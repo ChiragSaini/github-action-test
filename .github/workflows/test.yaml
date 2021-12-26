@@ -21,6 +21,11 @@ jobs:
         run: tree
       - name: 'Deploy'
         run: yarn deploy
+  test-app:
+    needs: build-app # Required for dependent jobs
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn test
 # myapp:
 #   service: |
 #     shit
