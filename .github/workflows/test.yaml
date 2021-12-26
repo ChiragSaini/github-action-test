@@ -15,6 +15,11 @@ jobs:
         run: yarn build
       - name: 'Show Tree'
         run: tree
+      - name: 'Deploy'
+        env: 
+          VERCEL_ORG_ID: 'OVDYwkb4OtXxevhyCgqraqch'
+          VERCEL_PROJECT_ID: 'prj_ddKlsqcY4f1Wa1Lt0kEIedpNC8F2'
+        run: yarn deploy
 # myapp:
 #   service: |
 #     shit
