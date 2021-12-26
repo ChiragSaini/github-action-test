@@ -28,7 +28,7 @@ jobs:
     needs: build-app # Required for dependent jobs
     runs-on: ubuntu-latest
     env:
-      - MY_JOB_OUTPUT: ${{ needs.build_app.outputs.text }}
+      MY_JOB_OUTPUT: ${{ needs.build_app.outputs.text }}
     steps:
       - run: echo $MY_JOB_OUTPUT
 # myapp:
