@@ -3,6 +3,10 @@ on: [push, pull_request]
 jobs:
   build-app:
     runs-on: ubuntu-latest
+    env: 
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID}}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID}}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN}}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -16,9 +20,6 @@ jobs:
       - name: 'Show Tree'
         run: tree
       - name: 'Deploy'
-        env: 
-          VERCEL_ORG_ID: 'OVDYwkb4OtXxevhyCgqraqch'
-          VERCEL_PROJECT_ID: 'prj_ddKlsqcY4f1Wa1Lt0kEIedpNC8F2'
         run: yarn deploy
 # myapp:
 #   service: |
