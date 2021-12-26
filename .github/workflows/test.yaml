@@ -25,7 +25,7 @@ jobs:
         id: finshed
         run: echo "::set-output-name=text::hello-world-from-build-job"
   test-app:
-    needs: build-app # Required for dependent jobs
+    needs: build_app # Required for dependent jobs
     runs-on: ubuntu-latest
     env:
       MY_JOB_OUTPUT: ${{ needs.build_app.outputs.text }}
